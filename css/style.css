@@ -12,12 +12,14 @@ html {
     width: 100%;
     height: 100%;
   }
+
   100% {
     width: 0;
     height: 0;
   }
 }
-body > div.loader {
+
+body>div.loader {
   position: fixed;
   background: white;
   width: 100%;
@@ -31,15 +33,20 @@ body > div.loader {
   align-items: center;
   justify-content: center;
 }
-body:not(.loaded) > div.loader {
+
+body:not(.loaded)>div.loader {
   opacity: 1;
 }
+
 body:not(.loaded) {
   overflow: hidden;
 }
-body.loaded > div.loader {
+
+body.loaded>div.loader {
   animation: hideLoader 0.5s linear 0.5s forwards;
-} /* Three dots Animation */
+}
+
+/* Three dots Animation */
 .loading-animation {
   width: 6px;
   height: 6px;
@@ -48,17 +55,20 @@ body.loaded > div.loader {
   position: relative;
   left: -12px;
 }
+
 @keyframes dots {
   0% {
     background-color: rgba(100, 100, 100, 1);
     box-shadow: 12px 0px 0px 0px rgba(100, 100, 100, 0.2),
       24px 0px 0px 0px rgba(100, 100, 100, 0.2);
   }
+
   25% {
     background-color: rgba(100, 100, 100, 0.4);
     box-shadow: 12px 0px 0px 0px rgba(100, 100, 100, 2),
       24px 0px 0px 0px rgba(100, 100, 100, 0.2);
   }
+
   75% {
     background-color: rgba(100, 100, 100, 0.4);
     box-shadow: 12px 0px 0px 0px rgba(100, 100, 100, 0.2),
@@ -70,21 +80,33 @@ body.loaded > div.loader {
 nav {
   z-index: 100;
 }
+
 .navbar {
   transition: all 1.5s ease-in-out;
 }
+
 .navbar-brand {
-  font-size: 2.5rem !important;
+  font-size: 23px !important;
   font-family: "Viga", sans-serif;
+  display: flex;
+  align-items: center;
 }
+
 .navbar-nav {
   font-weight: 600;
 }
+
 .nav-item a {
   overflow: hidden;
   box-sizing: border-box;
   font-size: 1.3rem;
   margin-bottom: -5px;
+}
+
+.navbar-logo {
+  width: 90px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .bawah::after {
@@ -96,22 +118,27 @@ nav {
   opacity: 0;
   transition: 0.5s;
 }
+
 .bawah:hover::after {
   animation: slide 0.3s forwards;
   opacity: 1;
 }
+
 .nav-scrolled-text-shadow {
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
+
 .nav-scrolled {
   background-color: rgb(240, 240, 240);
   box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.2);
   transition: all 1.5s;
 }
+
 .navbar-brand,
 .nav-item a {
   transition: all 1.5s ease-in;
 }
+
 .navbar-toggler,
 .navbar-toggler-icon {
   transition: all 1.5s ease-out;
@@ -121,22 +148,21 @@ nav {
   0% {
     transform: translateX(-100px);
   }
+
   100% {
     transform: translateX(0);
   }
 }
 
 /* Jumbotron */
+
+
 .jumbotron {
-  min-height: 80vh;
-  background-image: url(../img/cafe.png);
+  min-height: 90vh;
+  background-color: rgb(255, 106, 0);
   background-size: cover;
   background-position: center;
   position: relative;
-}
-.jumbotron-contact {
-  background-image: url(../img/cafe2.png);
-  min-height: 45vh;
 }
 
 .jumbotron::after {
@@ -155,14 +181,17 @@ nav {
   position: relative;
   z-index: 10;
 }
+
 .jumbotron-contact .jumbotron-text {
   padding-top: 150px;
 }
+
 .jumbotron-text h1 {
   color: #fff;
   font-size: 4.5rem;
   font-weight: 400;
 }
+
 .jumbotron-text p {
   color: #cecece;
 }
@@ -196,25 +225,26 @@ nav {
 }
 
 .menu-list {
-  background: linear-gradient(
-    to right,
-    rgb(120, 50, 25),
-    rgb(180, 110, 80),
-    rgb(200, 130, 100)
-  );
+  background: linear-gradient(to right,
+      rgb(120, 50, 25),
+      rgb(180, 110, 80),
+      rgb(200, 130, 100));
   width: max-content;
   padding: 12px 20px 12px 12px;
   border-radius: 5px 30px 30px 5px;
   color: #fff;
 }
+
 .menu-list p,
 .menu-list span {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
 .menu-list p {
   transition: all 0.3s ease;
 }
+
 .menu-list p:hover {
   opacity: 0.6;
   cursor: pointer;
@@ -225,6 +255,7 @@ nav {
   overflow: hidden;
   box-shadow: 10px 15px 20px 5px rgba(100, 100, 100, 0.4);
 }
+
 .menu-image {
   width: 100%;
   height: 100%;
@@ -245,6 +276,7 @@ nav {
 .fade {
   animation: fadeIn 0.5s forwards;
 }
+
 .slideIn {
   animation: slideIn 0.5s forwards;
 }
@@ -253,15 +285,18 @@ nav {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes slideIn {
   0% {
     opacity: 0;
     transform: translateX(-150px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0px);
@@ -280,14 +315,17 @@ nav {
 .potrait-gallery {
   border: 10px solid #fff;
 }
+
 .landscape-gallery img {
   border-radius: 30px;
   border: 10px solid #fff;
   box-shadow: 3px 3px 20px 2px rgba(50, 50, 50, 0.3);
 }
+
 .landscape-gallery {
   transition: 0.3s ease;
 }
+
 .landscape-gallery:hover {
   opacity: 0.85;
 }
@@ -296,6 +334,7 @@ nav {
 #reviews {
   scroll-margin-top: 100px;
 }
+
 .read-all:hover {
   cursor: pointer;
   opacity: 0.7;
@@ -308,10 +347,12 @@ nav {
   box-sizing: border-box;
   transition: all 0.3s;
 }
+
 .review-box:hover {
   cursor: pointer;
   transform: translateY(-5px);
 }
+
 .profile-img {
   width: 50px;
   height: 50px;
@@ -319,38 +360,46 @@ nav {
   overflow: hidden;
   margin-right: 10px;
 }
+
 .profile-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
+
 .profile {
   display: flex;
   align-items: center;
 }
+
 .name-user {
   display: flex;
   flex-direction: column;
 }
+
 .name-user strong {
   color: #3d3d3d;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
+
 .name-user span {
   color: #979797;
   font-size: 0.8rem;
 }
+
 .stars {
   color: #f9d71c;
 }
+
 .box-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .customer-comment p {
   font-size: 0.9rem;
   color: #4b4b4b;
@@ -360,6 +409,7 @@ nav {
 .google-map {
   width: 100%;
 }
+
 .connect li i {
   width: 24px;
   height: 24px;
@@ -369,39 +419,10 @@ nav {
 }
 
 /* Footer */
-#footer {
-  margin-top: 50px;
-}
-.footer {
-  padding-top: 30px;
-  background-image: url(../img/cafe3.png);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  min-height: 30vh;
-}
-#footer.footer-contact {
-  margin-top: -25px;
-}
-.footer::after {
-  content: "";
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
-  position: absolute;
-  opacity: 0.7;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.footer-content,
-.text-footer {
-  padding-top: 20px;
-  position: relative;
-  z-index: 100;
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-}
-.footer-title h1 {
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+footer {
+  background-color: #2800a0;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Scroll Up */
@@ -420,6 +441,7 @@ nav {
   display: none;
   opacity: 0.7;
 }
+
 .go-top-btn i {
   font-size: 24px;
   color: white;
@@ -427,13 +449,14 @@ nav {
 
 /* Quote */
 .quote-background {
-  background-image: url(../img/nature.jpg);
+  background-image: url(../img/WhatsApp\ Image\ 2023-08-31\ at\ 14.03.20.jpeg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 222;
 }
+
 .quotes {
   margin-top: 100px;
   min-height: 70vh;
@@ -441,13 +464,16 @@ nav {
   color: #fff;
   text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
 }
+
 .quote {
   font-weight: 400;
 }
+
 .credit {
   font-size: 3.5rem;
   font-weight: 200;
 }
+
 .quote-background::after {
   content: "";
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
@@ -458,6 +484,7 @@ nav {
   right: 0;
   z-index: -2;
 }
+
 .garisbawah {
   margin-top: 25px;
   margin-bottom: 20px;
@@ -465,6 +492,7 @@ nav {
   width: 10%;
   background-color: #f9d71c;
 }
+
 /* Responsive */
 @media (min-width: 1400px) {
   .right-img-menu {
@@ -477,9 +505,11 @@ nav {
   .bawah::after {
     display: none;
   }
+
   .quotes {
     font-size: 3rem;
   }
+
   .credit {
     font-size: 2.5rem;
   }
@@ -488,15 +518,23 @@ nav {
 @media (max-width: 768px) {
   .jumbotron-text {
     padding-top: 150px;
+    font-size: 14px
   }
+
+  .jumbotron {
+    padding: 100px 0;
+    font-size: 18px;
+  }
+
   .jumbotron-text h1 {
-    font-size: 3.5rem;
+    font-size: 20px;
     padding-top: 10px;
   }
 
   .menu-text {
     margin-top: 0;
   }
+
   .jumbotron-contact {
     padding-top: 40px;
   }
@@ -506,9 +544,11 @@ nav {
   .jumbotron-text {
     padding-top: 125px;
   }
+
   .jumbotron {
     min-height: 90vh;
   }
+
   .jumbotron-contact {
     min-height: 60vh;
   }
@@ -524,4 +564,14 @@ nav {
   .credit {
     font-size: 1.7rem;
   }
+}
+/* Ganti warna teks link di footer menjadi warna yang Anda inginkan, misalnya hitam */
+footer a {
+  color: #ff5900; /* Ganti kode warna sesuai keinginan Anda, misalnya hitam (#000) */
+  text-decoration: none; 
+}
+
+/* Ganti warna teks tautan saat tautan diklik atau dikunjungi */
+footer a:hover{
+  color: #ffffff; /* Ganti kode warna sesuai keinginan Anda, misalnya merah (#ff0000) */
 }
